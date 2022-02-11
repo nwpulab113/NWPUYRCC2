@@ -24,18 +24,11 @@ We selected the Ningxia–Inner Mongolia reach of the Yellow River as our study 
 
 There are no suitable UAV image datasets for the fine-grained river ice segmentation of the Yellow River. Therefore, we built the NWPU_YRCC2 dataset. The NWPU_YRCC2 dataset contains four categories: Shore ice, drift ice, water, and others. It is necessary to distinguish shore ice and drift ice, since the calculation of drift ice cover density, which is an important factor in the actual freeze-up date forecast, just considers the ratio of drift ice and excludes shore ice. The aerial images were taken annually from 2015 to 2019 at the Ningxia–Inner Mongolia reach of the Yellow River from November to March. During data collection, an ASN216 fixed-wing drone with a visible light camera Canon 5DS and a DJI Inspire 1 were used to capture images and videos. The UAV images are taken in nadir view or oblique view during data capture. However, when calculating the drift ice cover density, the UAV images are required to be captured in nadir view. The flying height of the drones ranges from 30 m to 600 m. Finally, 200 videos were captured, ranging in length from 10 min to 50 min. The maximum image resolution and maximum video resolution of the Canon 5DS camera on ASN216 are 8688 × 5792 and 1920 × 1080, respectively, while the maximum image resolution and maximum video resolution of the camera on DJI Inspire 1 are 4000 × 3000 and 4096 × 2160, respectively. To keep the resolution of the input image of the model consistent, we resized the images to 1600 × 640. From the videos and images obtained from aerial photography, 305 typical images containing four categories of targets are carefully selected. These images are mainly collected during the freeze-up period. We use Photoshop software to label each pixel of the images into four categories: Shore ice, drift ice, water, and others. The reason why we do not use other annotation tools such as Labelme and Image Labeler is that they are difficult to use for marking the boundary between these four categories. It is worth mentioning that this annotation work is very time-consuming. We divided 305 images into training set, validation set, and test set at a ratio of 6:2:2. Then, they are expanded to 1525 images to form the NWPU_YRCC2 dataset by data augmentation operations, including the brightness adjustment, flipping, and clipping. The brightness adjustment includes two ways, increasing brightness and decreasing brightness. For flipping, we used both horizontal and vertical flipping.
 ## Data Orgnization
--Dataset
-    
-        --TUM
-      
-        --KITTI
-      
-        --Tanks_and_Temples
-      
-        --CPC
-     
-     -Pipeline
-     
-     -Evaluation
-     
-     -vlfeat-0.9.21
+     -Dataset
+      -train
+      -train_labels
+      -val
+      -val_labels
+      -test
+      -test_labels
+      -class_dict.csv
