@@ -5,7 +5,8 @@ Ice caps, ice plugs, or ice dams are often formed in high latitude rivers in win
 
 We built a UAV image dataset named NWPU_YRCC2 for fine-grained river ice semantic segmentation. All UAV images were collected in the Ningxia–Inner Mongolia reach of the Yellow River, since the ice phenomenon in this reach is very typical and diverse. The dataset consists of 1525 precisely labeled images covering typical river ice images with different characteristics.
 ### Paper Link
-The paper can be downloaded from this link. Please cite our paper when using the dataset.
+The paper can be downloaded from this [link](https://www.researchgate.net/publication/349258007_ICENETv2_A_Fine-Grained_River_Ice_Semantic_Segmentation_Network_Based_on_UAV_Images).
+Please cite our paper when using the dataset.
  ```
 @article{zhang2021icenetv2,
   title={ICENETv2: A Fine-Grained River Ice Semantic Segmentation Network Based on UAV Images},
